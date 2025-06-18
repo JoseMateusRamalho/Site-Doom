@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b350b;
+    font-size: 18px;
+}
+
+
+section {
+    scroll-margin-top: 90px;
+}
+
+
+header {
+    background-color: #ffd000;
+    padding: 1% 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #073618;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 1.2rem;
+}
+
+
+.banner {
+    background: url(../img/BANNER.png) no-repeat center/cover;
+    height: 80vh;
+    min-height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-family: 'Georgia', serif;
+    color: #B22222;
+    text-align: center;
+    text-shadow: 4px 4px 0px #000, 0px 0px 15px #000;
+}
+
+
+#biografia {
+    padding: 35px;
+    background-color: #05520b;
+}
+
+.Biografia-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1400px;
+    margin: auto;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.biografia-texto {
+    flex: 1;
+    padding: 20px;
+}
+
+.biografia-texto h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.biografia-texto p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.biografia-texto a {
+    text-decoration: none;
+    color: #ec5353;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.fonte {
+    font-size: 1.2rem;
+}
+
+
+.hex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    flex: 1;
+}
+
+.hex {
+    width: 140px;
+    height: 120px;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+    overflow: hidden;
+    background-color: #FAEBD7;
+    position: relative;
+}
+
+.hex img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.titulo {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 1rem;
+    color: #FFFFFF;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin: 1rem;
+    color: #8B0000;
+}
+
+p, li {
+    margin: 0.5rem 1rem;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+}
+
+a {
+    color: #1DB954;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+footer {
+    background-color: #111111;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+.imgcard {
+    width: 70%;
+}
+
+
+.discografia-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#discografia .item {
+    background-color: #042915;
+    border: 1px solid hsl(73, 100%, 84%);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+#discografia .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px #000;
+}
+
+#discografia .item:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 6px #000;
+}
+
+#discografia .item p {
+    margin-top: 15px;
+    font-size: 0.95em;
+    color: #7B68EE;
+}
+
+#discografia .item img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.modal:target {
+    display: flex;
+}
+
+.modal-content {
+    max-height: 60vh;
+    overflow-y: auto;
+    background: #B0C4DE;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: justify;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 8px 16px;
+    background: red;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #B0C4DE;
+    color: red;
+    text-decoration: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header .container, .Biografia-container {
+        flex-direction: column;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    .banner {
+        font-size: 1em;
+    }
+
+    section{
+        scroll-margin-top: 200px;
+    }
+    
+    .modal{
+        margin-top: 100px;
+    }
+    
+    .modal-content{
+        max-height: 60vh;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 2em;
+    }
+    nav ul li a {
+        font-size: 1rem;
+    }
+    .biografia-texto h2 {
+        font-size: 2em;
+    }
+    .banner {
+        font-size: 0.9em;
+        height: 50vh;
+    }
+    .hex {
+        width: 100px;
+        height: 90px;
+    }
+    .modal-content {
+        padding: 20px;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo {
+        font-size: 1.5em;
+    }
+    nav ul li {
+        margin: 5px;
+    }
+    .hex {
+        width: 90px;
+        height: 80px;
+    }
+    .discografia-container {
+        grid-template-columns: 1fr;
+        padding: 20px 10px;
+    }
+}
