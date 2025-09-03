@@ -417,3 +417,42 @@ footer {
         height: 80px;
     }
 }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #123607;
+    padding: 30px;
+  }
+
+  table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: #203804;
+  }
+
+  tr:hover {
+    background-color: #e0f7fa;
+  }
+
+  caption {
+    caption-side: top;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
